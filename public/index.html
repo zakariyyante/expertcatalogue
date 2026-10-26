@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expertcatalogue - Em breve</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Portuguese Flag Background: Green (2/5), Red (3/5) */
+            background: linear-gradient(to right, 
+                #006600 0%, #006600 40%, 
+                #FF0000 40%, #FF0000 100%);
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            /* New logo has white background, no need for black padding */
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1B3022; /* Dark forest green from new logo */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #B89F71; /* Gold/bronze from new logo */
+        }
+
+        .slogan {
+            font-size: 1rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1.5rem;
+            min-height: 1.2rem;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #1B3022; /* Dark forest green */
+            color: #B89F71; /* Gold/bronze */
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo.jpg" alt="expertcatalogue Logo" class="logo">
+        <div id="slogan" class="slogan"></div>
+        <h1>Em breve!</h1>
+        <p>Obrigado pela sua paciência!</p>
+    </div>
+
+    <footer>
+        © 2026 EXPERTCATALOGUE.COM • TODOS OS DIREITOS RESERVADOS
+    </footer>
+
+    <script>
+        const slogans = [
+            "expertcatalogue - As melhores avaliações por especialistas",
+            "expertcatalogue - A perícia ao serviço das suas escolhas",
+            "expertcatalogue - A sua fonte de confiança para gaming",
+            "expertcatalogue - Análise aprofundada e testes imparciais",
+            "expertcatalogue - O seu guia para as melhores plataformas"
+        ];
+        
+        document.getElementById('slogan').textContent = slogans[Math.floor(Math.random() * slogans.length)];
+    </script>
+</body>
+</html>
